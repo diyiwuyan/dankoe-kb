@@ -181,6 +181,37 @@
   }
 
   // ============================================================
+  // Lang Tab Switch (中文 / English)
+  // ============================================================
+
+  function initLangTabs() {
+    const tabs = document.querySelectorAll('.lang-tab');
+    if (!tabs.length) return;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+
+        // 切换 tab 激活状态
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // 切换内容面板
+        document.querySelectorAll('.tab-panel').forEach(panel => {
+          panel.style.display = panel.dataset.panel === target ? '' : 'none';
+        });
+
+        // 同步侧边栏金句标签颜色（可选视觉反馈）
+        const isZh = target === 'zh';
+        document.querySelectorAll('.key-quote').forEach(q => {
+          q.style.borderLeftColor = isZh ? '' : '#4a4a6a';
+          q.style.opacity = isZh ? '' : '0.7';
+        });
+      });
+    });
+  }
+
+  // ============================================================
   // Init
   // ============================================================
 
@@ -188,6 +219,7 @@
     initSearch();
     initReadingProgress();
     initAnchors();
+    initLangTabs();
   });
 
 })();

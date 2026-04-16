@@ -50,6 +50,10 @@
                 <span>Dan Koe</span>
                 <a href="https://thedankoe.com/letters/learn-ai-to-10x-any-other-skill-full-beginner-guide/" target="_blank" class="source-link">阅读原文 →</a>
             </div>
+            <div class="lang-tabs">
+                <button class="lang-tab active" data-tab="zh">中文</button>
+                <button class="lang-tab" data-tab="en">English</button>
+            </div>
         </div>
 
         
@@ -57,10 +61,10 @@
             <div class="summary-label">中文导读</div>
             <p>AI 是当下最值得掌握的元技能，但 95% 的人根本不知道如何正确使用它。Dan Koe 在这篇完整的初学者指南中，从 AI 的基础原理讲起，拆解了 LLM 的工作方式、主流模型的差异，以及最关键的——如何写出真正有效的提示词。他提出了一个核心转变：从"任务思维"升级为"系统思维"。通过五部分提示词框架（系统、背景、指令、示例、约束），你可以构建可复用的 AI 工作流，将写作、学习、创意生成、客户分析等工作效率提升 10 倍。AI 不会让你变懒，但会让那些懂得驾驭它的人，把时间全部投入到真正热爱的事情上。</p>
         </div>
-        
-        <div class="content-section content-zh">
-            <div class="content-section-label">中文全文</div>
-            <p>AI 是你现在能获取的最新、最有价值的高价值技能。</p>
+
+        <div class="tab-panel" data-panel="zh">
+            <div class="content-zh">
+                <p>AI 是你现在能获取的最新、最有价值的高价值技能。</p>
 
 <p>但它与其他技能不同。</p>
 
@@ -441,16 +445,12 @@
 
 <p>我希望这封信有帮助，我希望你有一些很酷的东西可以尝试 🙂</p>
 
+            </div>
         </div>
-        
-        <div class="content-section content-en-collapsible">
-            <details class="en-original">
-                <summary class="en-original-toggle">
-                    <span>英文原文</span>
-                    <span class="toggle-hint">点击展开 / 收起</span>
-                </summary>
-                <div class="en-original-body">
-                    <p>AI is the latest and greatest high-value skill you can acquire.</p>
+
+        <div class="tab-panel" data-panel="en" style="display:none">
+            <div class="en-original-body">
+                <p>AI is the latest and greatest high-value skill you can acquire.</p>
 
 
 <p>But it isn't like other skills.</p>
@@ -1148,8 +1148,7 @@
 
 
 <p>I hope this letter was helpful, and I hope you have some cool things to try 🙂</p>
-                </div>
-            </details>
+            </div>
         </div>
     </main>
 </div>

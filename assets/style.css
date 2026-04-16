@@ -660,6 +660,47 @@ a { color: inherit; text-decoration: none; }
 .source-link { color: var(--accent); font-size: 13px; }
 .source-link:hover { text-decoration: underline; }
 
+/* ============================================================
+   中英文切换 Tab
+   ============================================================ */
+
+.lang-tabs {
+  display: flex;
+  gap: 4px;
+  margin-top: 20px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0;
+}
+
+.lang-tab {
+  position: relative;
+  bottom: -2px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+  letter-spacing: 0.02em;
+}
+
+.lang-tab:hover {
+  color: var(--text);
+}
+
+.lang-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tab-panel {
+  margin-top: 32px;
+}
+
 /* 文章正文排版（中文/英文通用基础） */
 .article-content,
 .content-zh,
